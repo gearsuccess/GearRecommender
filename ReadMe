@@ -1,0 +1,44 @@
+Overview:
+GearRecommender is a python library for recommendation system. It aims to provide a convenient tool for researchers.
+
+Algorithms:
+There are 5 classes in this library:
+1.collaborative filtering methods
+2.content based methods
+3.context aware methods
+4.hybrid methods
+5.other methods
+
+For collaborative filtering methods, we implement item-based cf, user-based cf, BPR,etc. For other categories, they are still under development.
+
+How to run
+1. Download our library
+2. Config the method
+3. run App.py
+
+Development
+1. Registering your method in AlgFactory.py
+2. Implementing your own method, note that fit()(model train) and score()(model evaluation) are necessary functions that you must implement
+
+Features:
+1. Automatic parameter tuning
+2. Parallel running(different models and different parameters)
+
+=====================================================================================================================
+Data Format:
+
+General_data:
+
+'uiDict'
+'iiDict'
+
+Train_data:
+
+'upiTrainDict'
+'ipuTrainDict'
+'uiraTrainDict'
+
+Test_data:
+
+'uiraTestDict'
+'upiTestDict'

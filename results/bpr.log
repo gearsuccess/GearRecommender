@@ -1,0 +1,12 @@
+2016-11-18 11:06:40,578 - bpr - INFO - Factors: 50 learningrate: 0.001 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:2 TopN:5
+2016-11-18 11:06:42,782 - bpr - INFO - starting iteration 0
+2016-11-18 17:55:06,296 - bpr - INFO - Factors: 50 learningrate: 0.001 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:2 TopN:5
+2016-11-18 17:55:08,568 - bpr - INFO - starting iteration 0
+2016-11-18 22:56:33,769 - bpr - INFO - Factors: 50 learningrate: 0.001 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:2 TopN:5
+2016-11-18 22:56:35,980 - bpr - INFO - starting iteration 0
+2016-11-19 08:58:33,667 - bpr - INFO - Factors: 50 learningrate: 0.001 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:2 TopN:5
+2016-11-19 08:58:35,875 - bpr - INFO - starting iteration 0
+2016-11-19 09:33:12,319 - bpr - INFO - Factors: 50 learningrate: 0.001 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:2 TopN:5
+2016-11-19 09:33:14,602 - bpr - INFO - starting iteration 0
+2016-11-19 09:33:42,526 - bpr - INFO - Factors: 50 learningrate: 0.001 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:2 TopN:5
+2016-11-19 09:33:44,832 - bpr - INFO - starting iteration 0

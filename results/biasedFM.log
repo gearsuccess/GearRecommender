@@ -1,0 +1,2 @@
+2016-11-18 11:06:15,759 - biasedFM - INFO - Factors: 25 learningrate: 0.01 userregular: 0.1 itemregular: 0.1 iter:1 TopN:50
+2016-11-18 11:06:17,403 - biasedFM - INFO - iteration: 0

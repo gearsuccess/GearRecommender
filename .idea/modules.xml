@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://E:/Paper/cxPaper/PaperWork/PKFE/PKFE/PKFEcode/FLVR1/.idea/FLVR.iml" filepath="E:/Paper/cxPaper/PaperWork/PKFE/PKFE/PKFEcode/FLVR1/.idea/FLVR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GearRecommender.iml" filepath="$PROJECT_DIR$/.idea/GearRecommender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MLTool/.idea/MLTool.iml" filepath="$PROJECT_DIR$/../MLTool/.idea/MLTool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MyCode/ReviewMiner/.idea/ReviewMiner.iml" filepath="$PROJECT_DIR$/../MyCode/ReviewMiner/.idea/ReviewMiner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MLTool/.idea/xgboost.iml" filepath="$PROJECT_DIR$/../MLTool/.idea/xgboost.iml" />
+    </modules>
+  </component>
+</project>
