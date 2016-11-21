@@ -75,12 +75,13 @@ class BiasedFM():
             else:
                 current_loss = self.score(0)
 
-            if current_loss > self.pre_loss:
-                self.biasedFM_logger.info('training end.')
+            if current_loss > self.pre_loss or abs(current_loss - self.pre_loss) < 0.01:
+                self.biasedFM_logger.info('converge!!')
                 break
             else:
                 self.pre_loss = current_loss
                 self.learning_rate = self.learning_rate * 0.93
+            self.biasedFM_logger.info('training end!')
 
         if self.insights:
             d = TrainingProcess(self.figure_data)

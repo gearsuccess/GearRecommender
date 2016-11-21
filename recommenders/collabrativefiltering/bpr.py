@@ -128,13 +128,13 @@ class BPR():
             else:
                 current_loss = self.score(0)
 
-            if current_loss - old_loss > 0:
+            if current_loss - old_loss > 0 or abs(current_loss - old_loss) < 0.01:
                 self.bpr_logger.info('converge!!')
                 break
             else:
                 old_loss = current_loss
                 self.learning_rate *= 0.9
-
+            self.bpr_logger.info('training end!')
 
     def save(self):
         t = pd.DataFrame(self.item_bias)
