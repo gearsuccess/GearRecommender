@@ -134,6 +134,7 @@ class BPR():
             else:
                 old_loss = current_loss
                 self.learning_rate *= 0.9
+        if it == self.iter - 1:
             self.bpr_logger.info('training end!')
 
     def save(self):

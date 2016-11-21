@@ -81,6 +81,7 @@ class BiasedFM():
             else:
                 self.pre_loss = current_loss
                 self.learning_rate = self.learning_rate * 0.93
+        if step == self.iter - 1:
             self.biasedFM_logger.info('training end!')
 
         if self.insights:
