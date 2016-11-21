@@ -26,3 +26,9 @@
 2016-11-21 13:37:19,625 - biasedFM - INFO - iteration: 5
 2016-11-21 13:37:34,961 - biasedFM - INFO - training loss: 42.4513473476
 2016-11-21 13:37:34,961 - biasedFM - INFO - iteration: 6
+2016-11-21 13:37:50,427 - biasedFM - INFO - training loss: 41.8974101954
+2016-11-21 13:37:50,427 - biasedFM - INFO - iteration: 7
+2016-11-21 13:38:05,806 - biasedFM - INFO - training loss: 41.4054521704
+2016-11-21 13:38:05,806 - biasedFM - INFO - iteration: 8
+2016-11-21 13:38:21,704 - biasedFM - INFO - training loss: 40.9650528663
+2016-11-21 13:38:21,706 - biasedFM - INFO - iteration: 9

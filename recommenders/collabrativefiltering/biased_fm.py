@@ -1,3 +1,4 @@
+import datetime
 from evaluation.evaluation import *
 from display.training_process import *
 import pickle
@@ -56,6 +57,7 @@ class BiasedFM():
 
         for step in range(self.iter):
             self.biasedFM_logger.info('iteration: ' + str(step))
+            s = datetime.datetime.now()
             for (ui, r) in self.user_item_rating_dict.items():
                 user = int(ui.split('##')[0])
                 item = int(ui.split('##')[1])
@@ -65,7 +67,9 @@ class BiasedFM():
                 temp = self.qi[item]
                 self.qi[item] += self.learning_rate*(np.dot(eui, self.pu[user]) - np.dot(self.item_regular, self.qi[item]))
                 self.pu[user] += self.learning_rate*(np.dot(eui, temp) - np.dot(self.user_regular, self.pu[user]))
-
+            e = datetime.datetime.now()
+            self.biasedFM_logger.info('iteration time cost: ' + str(e-s))
+            
             if (step+1) % self.number_of_test_seen == 0:
                 current_loss = self.score(1)[1]
             else:
@@ -135,18 +139,14 @@ class BiasedFM():
             predict_top_n = []
             true_purchased = []
             self.user_recommend = []
-            '''
+
             for (ui, rating) in self.true_rating_dict.items():
                 user = int(ui.split('##')[0])
                 item = int(ui.split('##')[1])
                 predict_rating_list.append(self.predict(user, item))
                 true_rating_list.append(rating)
-            '''
-            print len(self.true_purchased_dict.items())
-            cx = 1
+
             for (u, items) in self.true_purchased_dict.items():
-                print cx
-                cx += 1
                 recommended_item = self.recommend(u)
                 predict_top_n.append(recommended_item)
                 self.user_recommend.append([u, recommended_item])
