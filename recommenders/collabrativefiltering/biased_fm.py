@@ -32,6 +32,7 @@ class BiasedFM():
         self.TopN = parameters['n']
         self.recommend_new = parameters['recommend_new']
         self.insights = parameters['display']
+        self.number_of_test_seen = parameters['number_of_test_seen']
 
         self.figure_data = []
         logging.config.fileConfig('log_conf')
@@ -52,6 +53,7 @@ class BiasedFM():
         self.figure_data.append([np.zeros(self.user_count),np.zeros(self.user_count),np.zeros(self.user_count),
                                  0, copy.deepcopy(self.pu),copy.deepcopy(self.qi),copy.deepcopy(self.bu),copy.deepcopy(self.bi)])
 
+
         for step in range(self.iter):
             self.biasedFM_logger.info('iteration: ' + str(step))
             for (ui, r) in self.user_item_rating_dict.items():
@@ -64,7 +66,11 @@ class BiasedFM():
                 self.qi[item] += self.learning_rate*(np.dot(eui, self.pu[user]) - np.dot(self.item_regular, self.qi[item]))
                 self.pu[user] += self.learning_rate*(np.dot(eui, temp) - np.dot(self.user_regular, self.pu[user]))
 
-            current_loss = self.score(1)[1]
+            if (step+1) % self.number_of_test_seen == 0:
+                current_loss = self.score(1)[1]
+            else:
+                current_loss = self.score(0)
+
             if current_loss > self.pre_loss:
                 self.biasedFM_logger.info('training end.')
                 break
@@ -108,7 +114,7 @@ class BiasedFM():
         result = np.argsort(candidate)[-1:-self.TopN-1:-1]
         return result
 
-    def score(self, log):
+    def score(self, final_score):
         current_loss = 0.0
         for (ui, r) in self.user_item_rating_dict.items():
             user = int(ui.split('##')[0])
@@ -116,39 +122,47 @@ class BiasedFM():
             eui = r - self.predict(user, item)
             current_loss += eui**2
         for user in self.user_index_dict.keys():
-            #user = int(user)
+            user = int(user)
             current_loss += self.user_regular*(np.dot(self.pu[user], self.pu[user])+self.bu[user]**2)
         for item in self.item_index_dict.keys():
-            #item = int(item)
+            item = int(item)
             current_loss += self.item_regular*(np.dot(self.qi[item], self.qi[item])+self.bi[item]**2)
 
-        e = Eval()
-        predict_rating_list = []
-        true_rating_list = []
-        predict_top_n = []
-        true_purchased = []
-        self.user_recommend = []
+        if final_score:
+            e = Eval()
+            predict_rating_list = []
+            true_rating_list = []
+            predict_top_n = []
+            true_purchased = []
+            self.user_recommend = []
+            '''
+            for (ui, rating) in self.true_rating_dict.items():
+                user = int(ui.split('##')[0])
+                item = int(ui.split('##')[1])
+                predict_rating_list.append(self.predict(user, item))
+                true_rating_list.append(rating)
+            '''
+            print len(self.true_purchased_dict.items())
+            cx = 1
+            for (u, items) in self.true_purchased_dict.items():
+                print cx
+                cx += 1
+                recommended_item = self.recommend(u)
+                predict_top_n.append(recommended_item)
+                self.user_recommend.append([u, recommended_item])
+                true_purchased.append(items)
 
-        for (ui, rating) in self.true_rating_dict.items():
-            user = int(ui.split('##')[0])
-            item = int(ui.split('##')[1])
-            predict_rating_list.append(self.predict(user, item))
-            true_rating_list.append(rating)
-
-        for (u, items) in self.true_purchased_dict.items():
-            recommended_item = self.recommend(u)
-            predict_top_n.append(recommended_item)
-            self.user_recommend.append([u, recommended_item])
-            true_purchased.append(items)
+            #rmse = e.RMSE(predict_rating_list, true_rating_list)
+            rmse = 0
+            f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
+            self.figure_data.append([np.array(p), np.array(r), rmse, copy.deepcopy(self.pu), copy.deepcopy(self.qi), copy.deepcopy(self.bu),copy.deepcopy(self.bi)])
+            self.biasedFM_logger.info(','.join(('f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r'+str(r) )))
+            return [rmse, current_loss, f1, hit, ndcg, p, r]
+        else:
+            self.biasedFM_logger.info('training loss: ' + str(current_loss))
+            return current_loss
 
 
-        rmse = e.RMSE(predict_rating_list, true_rating_list)
-        f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
-        if log:
-            self.biasedFM_logger.info('training loss: ' + str(current_loss) + ',  test RMSE: ' + str(rmse))
-        self.figure_data.append([np.array(p), np.array(r), rmse, copy.deepcopy(self.pu), copy.deepcopy(self.qi), copy.deepcopy(self.bu),copy.deepcopy(self.bi)])
-        self.biasedFM_logger.info(','.join(('f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r'+str(r) )))
-        return [rmse, current_loss, f1, hit, ndcg, p, r]
 
 
 

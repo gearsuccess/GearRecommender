@@ -1,12 +1,12 @@
 [general]
 inputPath = E:\Project\GearRecommender\dataserver\Amazon\sigir17\CD
 n_fold = 0
-main_evaluation = 0
-mid_log = 0
+main_evaluation = 1
+
 
 
 [algorithms]
-all = BPR
+all = BiasedFM
 
 [TopN]
 n = [50]
@@ -26,9 +26,11 @@ factors = [25]
 learningrate = [0.01]
 userregular = [0.1]
 itemregular = [0.1]
-iter = [1]
+iter = [50]
 display = [0]
 recommend_new = [1]
+number_of_test_seen = [10]
+
 
 [BPR]
 n = [5]

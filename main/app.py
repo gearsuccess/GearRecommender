@@ -38,8 +38,7 @@ class App:
             alg = AlgFactory.create(alg_name, path, parameters)
             alg.fit()
             main_evaluation = self.alg_config.general_settings['main_evaluation']
-            mid_log = self.alg_config.general_settings['mid_log']
-            r = np.array(alg.score(mid_log)[main_evaluation])
+            r = np.array(alg.score(1)[main_evaluation])
             alg.save()
             e = datetime.datetime.now()
             self.lock.acquire()
@@ -52,8 +51,8 @@ class App:
                 alg = AlgFactory.create(alg_name, path, parameters)
                 alg.fit()
                 main_evaluation = self.alg_config.general_settings['main_evaluation']
-                mid_log = self.alg_config.general_settings['mid_log']
-                r = np.array(alg.score(mid_log)[main_evaluation])
+
+                r = np.array(alg.score(1)[main_evaluation])
                 alg.save()
             r = r.sum() / int(self.alg_config.general_settings['n_fold'])
             e = datetime.datetime.now()

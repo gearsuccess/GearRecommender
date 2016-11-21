@@ -186,7 +186,7 @@ class BPR():
         f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
         if log:
             self.bpr_logger.info(''.join(('training loss: ', str(current_loss), ',  test F1-score: ' + str(f1))))
-        self.bpr_logger.info(','.join(('f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r'+str(r) )))
+        self.bpr_logger.info(','.join(('f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r:'+str(r) )))
         return [f1, current_loss, rmse, ndcg, p, r]
 
 

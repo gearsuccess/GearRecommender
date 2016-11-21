@@ -1,2 +1,28 @@
 2016-11-18 11:06:15,759 - biasedFM - INFO - Factors: 25 learningrate: 0.01 userregular: 0.1 itemregular: 0.1 iter:1 TopN:50
 2016-11-18 11:06:17,403 - biasedFM - INFO - iteration: 0
+2016-11-21 13:12:51,482 - biasedFM - INFO - Factors: 25 learningrate: 0.01 userregular: 0.1 itemregular: 0.1 iter:1 TopN:50
+2016-11-21 13:12:53,180 - biasedFM - INFO - iteration: 0
+2016-11-21 13:21:31,976 - biasedFM - INFO - Factors: 25 learningrate: 0.01 userregular: 0.1 itemregular: 0.1 iter:1 TopN:50
+2016-11-21 13:21:33,575 - biasedFM - INFO - iteration: 0
+2016-11-21 13:21:56,512 - biasedFM - INFO - training loss: 47.3065639707
+2016-11-21 13:24:49,809 - biasedFM - INFO - Factors: 25 learningrate: 0.01 userregular: 0.1 itemregular: 0.1 iter:1 TopN:50
+2016-11-21 13:24:51,401 - biasedFM - INFO - iteration: 0
+2016-11-21 13:25:06,954 - biasedFM - INFO - training loss: 47.3601642505
+2016-11-21 13:30:51,453 - biasedFM - INFO - Factors: 25 learningrate: 0.01 userregular: 0.1 itemregular: 0.1 iter:50 TopN:50
+2016-11-21 13:30:53,069 - biasedFM - INFO - iteration: 0
+2016-11-21 13:33:15,313 - biasedFM - INFO - Factors: 25 learningrate: 0.01 userregular: 0.1 itemregular: 0.1 iter:50 TopN:50
+2016-11-21 13:33:16,907 - biasedFM - INFO - iteration: 0
+2016-11-21 13:36:00,186 - biasedFM - INFO - Factors: 25 learningrate: 0.01 userregular: 0.1 itemregular: 0.1 iter:50 TopN:50
+2016-11-21 13:36:01,769 - biasedFM - INFO - iteration: 0
+2016-11-21 13:36:17,365 - biasedFM - INFO - training loss: 47.3543684658
+2016-11-21 13:36:17,365 - biasedFM - INFO - iteration: 1
+2016-11-21 13:36:32,926 - biasedFM - INFO - training loss: 45.7806728436
+2016-11-21 13:36:32,926 - biasedFM - INFO - iteration: 2
+2016-11-21 13:36:48,325 - biasedFM - INFO - training loss: 44.6840759052
+2016-11-21 13:36:48,326 - biasedFM - INFO - iteration: 3
+2016-11-21 13:37:03,918 - biasedFM - INFO - training loss: 43.8129448017
+2016-11-21 13:37:03,918 - biasedFM - INFO - iteration: 4
+2016-11-21 13:37:19,625 - biasedFM - INFO - training loss: 43.082156745
+2016-11-21 13:37:19,625 - biasedFM - INFO - iteration: 5
+2016-11-21 13:37:34,961 - biasedFM - INFO - training loss: 42.4513473476
+2016-11-21 13:37:34,961 - biasedFM - INFO - iteration: 6
