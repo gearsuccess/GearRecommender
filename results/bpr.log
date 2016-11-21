@@ -10,3 +10,183 @@
 2016-11-19 09:33:14,602 - bpr - INFO - starting iteration 0
 2016-11-19 09:33:42,526 - bpr - INFO - Factors: 50 learningrate: 0.001 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:2 TopN:5
 2016-11-19 09:33:44,832 - bpr - INFO - starting iteration 0
+2016-11-21 14:08:46,944 - bpr - INFO - Factors: 50 learningrate: 0.001 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:2 TopN:5
+2016-11-21 14:08:49,483 - bpr - INFO - starting iteration 0
+2016-11-21 14:08:51,098 - bpr - INFO - training loss: 6931.52188319
+2016-11-21 14:08:51,115 - bpr - INFO - starting iteration 1
+2016-11-21 14:08:52,736 - bpr - INFO - training loss: 6931.52220203
+2016-11-21 14:08:52,736 - bpr - INFO - converge!!
+2016-11-21 14:10:22,569 - bpr - INFO - Factors: 50 learningrate: 0.0001 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:10:25,667 - bpr - INFO - starting iteration 0
+2016-11-21 14:10:27,637 - bpr - INFO - training loss: 6931.52181753
+2016-11-21 14:10:27,637 - bpr - INFO - starting iteration 1
+2016-11-21 14:10:29,730 - bpr - INFO - training loss: 6931.52182375
+2016-11-21 14:10:29,730 - bpr - INFO - converge!!
+2016-11-21 14:21:31,628 - bpr - INFO - Factors: 50 learningrate: 0.01 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:21:33,983 - bpr - INFO - starting iteration 0
+2016-11-21 14:21:35,512 - bpr - INFO - training loss: 6931.53127178
+2016-11-21 14:21:35,529 - bpr - INFO - starting iteration 1
+2016-11-21 14:21:37,134 - bpr - INFO - training loss: 6931.55309354
+2016-11-21 14:21:37,134 - bpr - INFO - converge!!
+2016-11-21 14:36:08,865 - bpr - INFO - Factors: 50 learningrate: 0.01 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:36:11,315 - bpr - INFO - starting iteration 0
+2016-11-21 14:36:13,096 - bpr - INFO - training loss: 6931.53325952
+2016-11-21 14:36:13,096 - bpr - INFO - starting iteration 1
+2016-11-21 14:36:14,855 - bpr - INFO - training loss: 6931.56208084
+2016-11-21 14:36:14,855 - bpr - INFO - converge!!
+2016-11-21 14:38:33,296 - bpr - INFO - Factors: 50 learningrate: 0.01 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:38:35,706 - bpr - INFO - starting iteration 0
+2016-11-21 14:38:36,117 - bpr - INFO - training loss: 6931.52249563
+2016-11-21 14:38:36,117 - bpr - INFO - starting iteration 1
+2016-11-21 14:38:36,489 - bpr - INFO - training loss: 6931.5242623
+2016-11-21 14:38:36,489 - bpr - INFO - converge!!
+2016-11-21 14:40:37,523 - bpr - INFO - Factors: 50 learningrate: 0.01 bias_regularization: 0.001 user_regularization: 0.001 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:40:40,578 - bpr - INFO - starting iteration 0
+2016-11-21 14:40:43,926 - bpr - INFO - training loss: 52164.6500448
+2016-11-21 14:40:43,926 - bpr - INFO - starting iteration 1
+2016-11-21 14:40:47,144 - bpr - INFO - training loss: 52164.8959081
+2016-11-21 14:40:47,144 - bpr - INFO - converge!!
+2016-11-21 14:41:44,604 - bpr - INFO - Factors: 50 learningrate: 0.01 bias_regularization: 0.01 user_regularization: 0.01 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:41:47,528 - bpr - INFO - starting iteration 0
+2016-11-21 14:41:50,082 - bpr - INFO - training loss: 69317.7335553
+2016-11-21 14:41:50,082 - bpr - INFO - starting iteration 1
+2016-11-21 14:41:52,713 - bpr - INFO - training loss: 69320.3704465
+2016-11-21 14:41:52,713 - bpr - INFO - converge!!
+2016-11-21 14:42:33,723 - bpr - INFO - Factors: 10 learningrate: 0.01 bias_regularization: 0.01 user_regularization: 0.01 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:42:36,131 - bpr - INFO - starting iteration 0
+2016-11-21 14:42:39,974 - bpr - INFO - training loss: 69317.7875553
+2016-11-21 14:42:39,974 - bpr - INFO - starting iteration 1
+2016-11-21 14:42:43,628 - bpr - INFO - training loss: 69320.5682701
+2016-11-21 14:42:43,628 - bpr - INFO - converge!!
+2016-11-21 14:43:26,661 - bpr - INFO - Factors: 10 learningrate: 0.01 bias_regularization: 0.01 user_regularization: 0.01 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:43:28,930 - bpr - INFO - starting iteration 0
+2016-11-21 14:43:33,657 - bpr - INFO - training loss: 69318.6989735
+2016-11-21 14:43:33,657 - bpr - INFO - starting iteration 1
+2016-11-21 14:43:38,763 - bpr - INFO - training loss: 69322.2550719
+2016-11-21 14:43:38,763 - bpr - INFO - converge!!
+2016-11-21 14:50:39,673 - bpr - INFO - Factors: 10 learningrate: 0.01 bias_regularization: 0.01 user_regularization: 0.01 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:50:41,372 - bpr - INFO - starting iteration 0
+2016-11-21 14:50:44,624 - bpr - INFO - training loss: 69310.7309371
+2016-11-21 14:50:44,625 - bpr - INFO - converge!!
+2016-11-21 14:51:22,135 - bpr - INFO - Factors: 10 learningrate: 0.01 bias_regularization: 0.01 user_regularization: 0.01 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:51:23,865 - bpr - INFO - starting iteration 0
+2016-11-21 14:51:27,125 - bpr - INFO - training loss: 69310.8080706
+2016-11-21 14:51:27,125 - bpr - INFO - starting iteration 1
+2016-11-21 14:51:30,246 - bpr - INFO - training loss: 69305.8579611
+2016-11-21 14:51:30,247 - bpr - INFO - converge!!
+2016-11-21 14:53:09,733 - bpr - INFO - Factors: 10 learningrate: 0.01 bias_regularization: 0.01 user_regularization: 0.01 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 14:53:11,867 - bpr - INFO - starting iteration 0
+2016-11-21 14:53:15,914 - bpr - INFO - training loss: 69310.7559157
+2016-11-21 14:53:15,914 - bpr - INFO - starting iteration 1
+2016-11-21 14:53:20,174 - bpr - INFO - training loss: 69305.6745272
+2016-11-21 14:53:20,176 - bpr - INFO - converge!!
+2016-11-21 15:16:24,055 - bpr - INFO - Factors: 10 learningrate: 0.01 bias_regularization: 0.01 user_regularization: 0.01 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 15:16:26,454 - bpr - INFO - starting iteration 0
+2016-11-21 15:16:30,756 - bpr - INFO - training loss: 50003.8596116
+2016-11-21 15:16:30,756 - bpr - INFO - converge!!
+2016-11-21 15:17:12,838 - bpr - INFO - Factors: 10 learningrate: 0.01 bias_regularization: 0.01 user_regularization: 0.01 positive_item_regularization: 0.001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 15:17:14,605 - bpr - INFO - starting iteration 0
+2016-11-21 15:17:17,691 - bpr - INFO - training loss: 50003.8397661
+2016-11-21 15:17:17,691 - bpr - INFO - starting iteration 1
+2016-11-21 15:17:20,798 - bpr - INFO - training loss: 50007.9643743
+2016-11-21 15:17:20,798 - bpr - INFO - converge!!
+2016-11-21 15:25:32,282 - bpr - INFO - Factors: 50 learningrate: 0.01 bias_regularization: 0.0001 user_regularization: 0.0001 positive_item_regularization: 0.0001 negative_item_regularization: 0.0001 iter:20 TopN:5
+2016-11-21 15:25:35,131 - bpr - INFO - starting iteration 0
+2016-11-21 15:25:38,065 - bpr - INFO - training loss: 50000.0687548
+2016-11-21 15:25:38,065 - bpr - INFO - starting iteration 1
+2016-11-21 15:25:40,953 - bpr - INFO - training loss: 50000.110415
+2016-11-21 15:25:40,953 - bpr - INFO - converge!!
+2016-11-21 15:28:40,558 - bpr - INFO - Factors: 50 learningrate: 0.01 bias_regularization: 0.0001 user_regularization: 0.0001 positive_item_regularization: 0.0001 negative_item_regularization: 0.0001 iter:20 TopN:5
+2016-11-21 15:28:41,092 - bpr - INFO - starting iteration 0
+2016-11-21 15:28:44,477 - bpr - INFO - training loss: 47688.551824
+2016-11-21 15:28:44,477 - bpr - INFO - starting iteration 1
+2016-11-21 15:28:47,875 - bpr - INFO - training loss: 46105.9575285
+2016-11-21 15:28:47,875 - bpr - INFO - starting iteration 2
+2016-11-21 15:28:51,388 - bpr - INFO - training loss: 45307.0930963
+2016-11-21 15:28:51,388 - bpr - INFO - starting iteration 3
+2016-11-21 15:28:54,858 - bpr - INFO - training loss: 44861.5824207
+2016-11-21 15:28:54,858 - bpr - INFO - starting iteration 4
+2016-11-21 15:28:58,266 - bpr - INFO - training loss: 44577.8770393
+2016-11-21 15:28:58,266 - bpr - INFO - starting iteration 5
+2016-11-21 15:29:01,776 - bpr - INFO - training loss: 44382.4134852
+2016-11-21 15:29:01,776 - bpr - INFO - starting iteration 6
+2016-11-21 15:29:05,190 - bpr - INFO - training loss: 44241.7910713
+2016-11-21 15:29:05,190 - bpr - INFO - starting iteration 7
+2016-11-21 15:29:08,614 - bpr - INFO - training loss: 44136.2064367
+2016-11-21 15:29:08,614 - bpr - INFO - starting iteration 8
+2016-11-21 15:29:12,102 - bpr - INFO - training loss: 44053.9001546
+2016-11-21 15:29:12,102 - bpr - INFO - starting iteration 9
+2016-11-21 15:29:18,578 - bpr - INFO - test:,f1:0.000462361291613,hit:0.00209937018894,ndcg:0.000474681882818,p:0.000419874037789,r:0.00064677566427
+2016-11-21 15:29:18,578 - bpr - INFO - starting iteration 10
+2016-11-21 15:29:22,134 - bpr - INFO - training loss: 43934.251034
+2016-11-21 15:29:22,134 - bpr - INFO - starting iteration 11
+2016-11-21 15:29:25,634 - bpr - INFO - training loss: 43888.6392724
+2016-11-21 15:29:25,634 - bpr - INFO - starting iteration 12
+2016-11-21 15:29:29,104 - bpr - INFO - training loss: 43850.014214
+2016-11-21 15:29:29,104 - bpr - INFO - starting iteration 13
+2016-11-21 15:29:32,516 - bpr - INFO - training loss: 43816.8922263
+2016-11-21 15:29:32,516 - bpr - INFO - starting iteration 14
+2016-11-21 15:29:36,035 - bpr - INFO - training loss: 43788.1942137
+2016-11-21 15:29:36,035 - bpr - INFO - starting iteration 15
+2016-11-21 15:29:39,489 - bpr - INFO - training loss: 43763.000891
+2016-11-21 15:29:39,489 - bpr - INFO - starting iteration 16
+2016-11-21 15:29:43,039 - bpr - INFO - training loss: 43740.7213974
+2016-11-21 15:29:43,040 - bpr - INFO - starting iteration 17
+2016-11-21 15:29:46,500 - bpr - INFO - training loss: 43720.9667187
+2016-11-21 15:29:46,500 - bpr - INFO - starting iteration 18
+2016-11-21 15:29:50,003 - bpr - INFO - training loss: 43703.3852618
+2016-11-21 15:29:50,003 - bpr - INFO - starting iteration 19
+2016-11-21 15:29:56,614 - bpr - INFO - test:,f1:0.000462361291613,hit:0.00209937018894,ndcg:0.000474681882818,p:0.000419874037789,r:0.00064677566427
+2016-11-21 15:30:00,789 - bpr - INFO - test:,f1:0.000462361291613,hit:0.00209937018894,ndcg:0.000474681882818,p:0.000419874037789,r:0.00064677566427
+2016-11-21 15:35:56,431 - bpr - INFO - Factors: 50 learningrate: 0.01 bias_regularization: 0.0001 user_regularization: 0.0001 positive_item_regularization: 0.0001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 15:35:59,305 - bpr - INFO - starting iteration 0
+2016-11-21 15:36:01,763 - bpr - INFO - training loss: 50000.2106079
+2016-11-21 15:36:01,763 - bpr - INFO - starting iteration 1
+2016-11-21 15:36:04,243 - bpr - INFO - training loss: 50000.2343807
+2016-11-21 15:36:04,243 - bpr - INFO - converge!!
+2016-11-21 15:37:12,252 - bpr - INFO - Factors: 50 learningrate: 0.001 bias_regularization: 0.0001 user_regularization: 0.0001 positive_item_regularization: 0.0001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 15:37:15,174 - bpr - INFO - starting iteration 0
+2016-11-21 15:37:17,861 - bpr - INFO - training loss: 50000.2001416
+2016-11-21 15:37:17,861 - bpr - INFO - starting iteration 1
+2016-11-21 15:37:20,575 - bpr - INFO - training loss: 50000.2004554
+2016-11-21 15:37:20,575 - bpr - INFO - converge!!
+2016-11-21 15:38:33,267 - bpr - INFO - Factors: 50 learningrate: 0.1 bias_regularization: 0.01 user_regularization: 0.01 positive_item_regularization: 0.1 negative_item_regularization: 0.1 iter:20 TopN:5
+2016-11-21 15:38:36,114 - bpr - INFO - starting iteration 0
+2016-11-21 15:38:38,638 - bpr - INFO - training loss: 49953.8121618
+2016-11-21 15:38:38,638 - bpr - INFO - starting iteration 1
+2016-11-21 15:38:41,200 - bpr - INFO - training loss: 49575.5709311
+2016-11-21 15:38:41,200 - bpr - INFO - starting iteration 2
+2016-11-21 15:38:43,796 - bpr - INFO - training loss: 49151.9070209
+2016-11-21 15:38:43,796 - bpr - INFO - starting iteration 3
+2016-11-21 15:38:46,413 - bpr - INFO - training loss: 48783.7430239
+2016-11-21 15:38:46,413 - bpr - INFO - starting iteration 4
+2016-11-21 15:38:48,999 - bpr - INFO - training loss: 48468.0927875
+2016-11-21 15:38:48,999 - bpr - INFO - starting iteration 5
+2016-11-21 15:38:51,533 - bpr - INFO - training loss: 48199.8345304
+2016-11-21 15:38:51,533 - bpr - INFO - starting iteration 6
+2016-11-21 15:38:54,072 - bpr - INFO - training loss: 47969.4208384
+2016-11-21 15:38:54,072 - bpr - INFO - starting iteration 7
+2016-11-21 15:38:56,602 - bpr - INFO - training loss: 47774.7528722
+2016-11-21 15:38:56,602 - bpr - INFO - starting iteration 8
+2016-11-21 15:38:59,178 - bpr - INFO - training loss: 47607.7058347
+2016-11-21 15:38:59,178 - bpr - INFO - starting iteration 9
+2016-11-21 15:39:31,290 - bpr - INFO - Factors: 50 learningrate: 0.1 bias_regularization: 0.0001 user_regularization: 0.0001 positive_item_regularization: 0.0001 negative_item_regularization: 0.001 iter:20 TopN:5
+2016-11-21 15:39:34,163 - bpr - INFO - starting iteration 0
+2016-11-21 15:39:36,677 - bpr - INFO - training loss: 49830.2086033
+2016-11-21 15:39:36,677 - bpr - INFO - starting iteration 1
+2016-11-21 15:39:39,298 - bpr - INFO - training loss: 49351.3494884
+2016-11-21 15:39:39,298 - bpr - INFO - starting iteration 2
+2016-11-21 15:39:41,954 - bpr - INFO - training loss: 48834.104438
+2016-11-21 15:39:41,954 - bpr - INFO - starting iteration 3
+2016-11-21 15:39:44,453 - bpr - INFO - training loss: 48360.3736458
+2016-11-21 15:39:44,453 - bpr - INFO - starting iteration 4
+2016-11-21 15:39:46,858 - bpr - INFO - training loss: 47948.1712456
+2016-11-21 15:39:46,858 - bpr - INFO - starting iteration 5
+2016-11-21 15:39:49,262 - bpr - INFO - training loss: 47596.6279178
+2016-11-21 15:39:49,262 - bpr - INFO - starting iteration 6
+2016-11-21 15:39:51,664 - bpr - INFO - training loss: 47296.1580872
+2016-11-21 15:39:51,664 - bpr - INFO - starting iteration 7
+2016-11-21 15:39:54,084 - bpr - INFO - training loss: 47040.4635403
+2016-11-21 15:39:54,085 - bpr - INFO - starting iteration 8
+2016-11-21 15:39:56,565 - bpr - INFO - training loss: 46819.9736898
+2016-11-21 15:39:56,566 - bpr - INFO - starting iteration 9

@@ -32,3 +32,36 @@
 2016-11-21 13:38:05,806 - biasedFM - INFO - iteration: 8
 2016-11-21 13:38:21,704 - biasedFM - INFO - training loss: 40.9650528663
 2016-11-21 13:38:21,706 - biasedFM - INFO - iteration: 9
+2016-11-21 14:00:27,532 - biasedFM - INFO - Factors: 25 learningrate: 0.01 userregular: 0.1 itemregular: 0.1 iter:50 TopN:50
+2016-11-21 14:00:29,176 - biasedFM - INFO - iteration: 0
+2016-11-21 14:00:40,579 - biasedFM - INFO - iteration time cost: 0:00:11.404000
+2016-11-21 14:02:13,750 - biasedFM - INFO - Factors: 25 learningrate: 0.01 userregular: 0.1 itemregular: 0.1 iter:50 TopN:50
+2016-11-21 14:02:15,365 - biasedFM - INFO - iteration: 0
+2016-11-21 14:02:26,752 - biasedFM - INFO - iteration time cost: 0:00:11.387000
+2016-11-21 14:02:31,003 - biasedFM - INFO - training loss: 47.3663594501
+2016-11-21 14:02:31,003 - biasedFM - INFO - iteration: 1
+2016-11-21 14:02:42,388 - biasedFM - INFO - iteration time cost: 0:00:11.385000
+2016-11-21 14:02:46,770 - biasedFM - INFO - training loss: 45.7951536733
+2016-11-21 14:02:46,772 - biasedFM - INFO - iteration: 2
+2016-11-21 14:02:58,645 - biasedFM - INFO - iteration time cost: 0:00:11.874000
+2016-11-21 14:03:02,811 - biasedFM - INFO - training loss: 44.6996657692
+2016-11-21 14:03:02,811 - biasedFM - INFO - iteration: 3
+2016-11-21 14:03:14,296 - biasedFM - INFO - iteration time cost: 0:00:11.486000
+2016-11-21 14:03:18,420 - biasedFM - INFO - training loss: 43.8291859881
+2016-11-21 14:03:18,420 - biasedFM - INFO - iteration: 4
+2016-11-21 14:03:30,184 - biasedFM - INFO - iteration time cost: 0:00:11.765000
+2016-11-21 14:03:34,729 - biasedFM - INFO - training loss: 43.0988612192
+2016-11-21 14:03:34,729 - biasedFM - INFO - iteration: 5
+2016-11-21 14:03:46,789 - biasedFM - INFO - iteration time cost: 0:00:12.061000
+2016-11-21 14:03:51,088 - biasedFM - INFO - training loss: 42.468390008
+2016-11-21 14:03:51,088 - biasedFM - INFO - iteration: 6
+2016-11-21 14:04:02,884 - biasedFM - INFO - iteration time cost: 0:00:11.796000
+2016-11-21 14:04:07,197 - biasedFM - INFO - training loss: 41.9147033708
+2016-11-21 14:04:07,197 - biasedFM - INFO - iteration: 7
+2016-11-21 14:04:18,865 - biasedFM - INFO - iteration time cost: 0:00:11.668000
+2016-11-21 14:04:23,311 - biasedFM - INFO - training loss: 41.4229403692
+2016-11-21 14:04:23,311 - biasedFM - INFO - iteration: 8
+2016-11-21 14:04:34,730 - biasedFM - INFO - iteration time cost: 0:00:11.420000
+2016-11-21 14:04:38,950 - biasedFM - INFO - training loss: 40.9826970254
+2016-11-21 14:04:38,951 - biasedFM - INFO - iteration: 9
+2016-11-21 14:04:50,332 - biasedFM - INFO - iteration time cost: 0:00:11.380000

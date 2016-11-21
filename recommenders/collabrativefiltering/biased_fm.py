@@ -69,7 +69,7 @@ class BiasedFM():
                 self.pu[user] += self.learning_rate*(np.dot(eui, temp) - np.dot(self.user_regular, self.pu[user]))
             e = datetime.datetime.now()
             self.biasedFM_logger.info('iteration time cost: ' + str(e-s))
-            
+
             if (step+1) % self.number_of_test_seen == 0:
                 current_loss = self.score(1)[1]
             else:
@@ -152,11 +152,10 @@ class BiasedFM():
                 self.user_recommend.append([u, recommended_item])
                 true_purchased.append(items)
 
-            #rmse = e.RMSE(predict_rating_list, true_rating_list)
-            rmse = 0
+            rmse = e.RMSE(predict_rating_list, true_rating_list)
             f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
             self.figure_data.append([np.array(p), np.array(r), rmse, copy.deepcopy(self.pu), copy.deepcopy(self.qi), copy.deepcopy(self.bu),copy.deepcopy(self.bi)])
-            self.biasedFM_logger.info(','.join(('f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r'+str(r) )))
+            self.biasedFM_logger.info(','.join(('test:', 'f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r'+str(r) )))
             return [rmse, current_loss, f1, hit, ndcg, p, r]
         else:
             self.biasedFM_logger.info('training loss: ' + str(current_loss))

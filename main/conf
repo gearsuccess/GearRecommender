@@ -6,7 +6,7 @@ main_evaluation = 1
 
 
 [algorithms]
-all = BiasedFM
+all = BPR
 
 [TopN]
 n = [50]
@@ -35,14 +35,15 @@ number_of_test_seen = [10]
 [BPR]
 n = [5]
 factors = [50]
-learning_rate = [0.001]
-bias_regularization = [0.001]
-user_regularization = [0.001]
-positive_item_regularization = [0.001]
+learning_rate = [0.1]
+bias_regularization = [0.0001]
+user_regularization = [0.0001]
+positive_item_regularization = [0.0001]
 negative_item_regularization = [0.001]
-iter = [2]
+iter = [20]
 display = [1]
 recommend_new = [1]
+number_of_test_seen = [10]
 
 [ItemCF]
 n = [5]
