@@ -34,6 +34,7 @@ class BiasedFM():
         self.recommend_new = parameters['recommend_new']
         self.insights = parameters['display']
         self.number_of_test_seen = parameters['number_of_test_seen']
+        self.main_evaluation = parameters['main_evaluation']
 
         self.figure_data = []
         logging.config.fileConfig('log_conf')
@@ -159,7 +160,7 @@ class BiasedFM():
             f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
             self.figure_data.append([np.array(p), np.array(r), rmse, copy.deepcopy(self.pu), copy.deepcopy(self.qi), copy.deepcopy(self.bu),copy.deepcopy(self.bi)])
             self.biasedFM_logger.info(','.join(('test:', 'f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r'+str(r) )))
-            return [rmse, current_loss, f1, hit, ndcg, p, r]
+            return eval(self.main_evaluation)
         else:
             self.biasedFM_logger.info('training loss: ' + str(current_loss))
             return current_loss

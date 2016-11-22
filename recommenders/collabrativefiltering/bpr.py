@@ -20,6 +20,9 @@ class BPR():
         self.recommend_new = parameters['recommend_new']
         self.insights = parameters['display']
         self.number_of_test_seen = parameters['number_of_test_seen']
+        self.main_evaluation = parameters['main_evaluation']
+
+
 
         logging.config.fileConfig('log_conf')
         self.bpr_logger = logging.getLogger('bpr')
@@ -56,7 +59,6 @@ class BPR():
 
         z = 1.0/(1.0+exp(x))
         # update bias terms
-
         if update_i:
             d = z - self.bias_regularization * self.item_bias[i]
             self.item_bias[i] += self.learning_rate * d
@@ -196,7 +198,8 @@ class BPR():
             rmse = e.RMSE(predict_rating_list, true_rating_list)
             f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
             self.bpr_logger.info(','.join(('test:', 'f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r:'+str(r) )))
-            return [f1, current_loss, rmse, ndcg, p, r]
+            return eval(self.main_evaluation)
+
         else:
             self.bpr_logger.info('training loss: ' + str(current_loss))
             return current_loss

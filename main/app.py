@@ -37,8 +37,7 @@ class App:
             path = os.path.join(self.path, 'no_validation/')
             alg = AlgFactory.create(alg_name, path, parameters)
             alg.fit()
-            main_evaluation = self.alg_config.general_settings['main_evaluation']
-            r = np.array(alg.score(1)[main_evaluation])
+            r = alg.score(1)
             alg.save()
             e = datetime.datetime.now()
             self.lock.acquire()
@@ -50,9 +49,7 @@ class App:
                 path = os.path.join(self.path, str(i))
                 alg = AlgFactory.create(alg_name, path, parameters)
                 alg.fit()
-                main_evaluation = self.alg_config.general_settings['main_evaluation']
-
-                r = np.array(alg.score(1)[main_evaluation])
+                r[i] = alg.score(1)
                 alg.save()
             r = r.sum() / int(self.alg_config.general_settings['n_fold'])
             e = datetime.datetime.now()

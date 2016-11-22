@@ -23,6 +23,7 @@ class AVERAGE():
         self.TopN = parameters['n']
         self.recommend_new = parameters['recommend_new']
         self.insights = parameters['display']
+        self.main_evaluation = parameters['main_evaluation']
 
         logging.config.fileConfig('log_conf')
         self.average_logger = logging.getLogger('average')
@@ -76,7 +77,7 @@ class AVERAGE():
         rmse = e.RMSE(predict_rating_list, true_rating_list)
         f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
         self.average_logger.info(','.join(('f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r'+str(r) )))
-        return [rmse, f1, hit, ndcg, p, r]
+        return eval(self.main_evaluation)
 
 
 
