@@ -6,7 +6,7 @@ main_evaluation = 1
 
 
 [algorithms]
-all = BPR
+all = TopN
 
 [TopN]
 n = [50]

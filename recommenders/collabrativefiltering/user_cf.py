@@ -90,12 +90,13 @@ class UserCF(BaseEstimator):
                 return rating
 
     def recommend(self, u):
+        candidate_ratings = np.array([self.predict(u, i) for i in range(self.item_count)])
+        candidate_items = np.argsort(candidate_ratings)[-1::-1]
         if self.recommend_new == 0:
-            candidate = np.array([self.predict(u, i) for i in range(self.item_count)])
+            result = candidate_items[:self.TopN]
         else:
-            candidate = np.array([self.predict(u, i) for i in range(self.item_count) if i not in self.user_purchased_item_dict[u]])
-
-        result = np.argsort(candidate)[-1:-self.top_n-1:-1]
+            new_items = np.array([i for i in candidate_items if i not in self.user_purchased_item_dict[u]])
+            result = new_items[:self.TopN]
         return result
 
     def score(self, log):

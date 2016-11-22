@@ -31,10 +31,12 @@ class TopN():
         self.topn_logger.info(''.join((' TopN:', str(self.n))))
 
     def fit(self):
-        vs = [len(i) for i in self.item_purchased_user_dict.values()]
-        ks = self.item_purchased_user_dict.keys()
-        index = np.argsort(np.array(vs))[-1::-1]
-        self.popItems = np.array(ks)[index]
+        item_itemnumber_list = [[i[0], len(i[1])] for i in self.item_purchased_user_dict.iteritems()]
+        keys = sorted(item_itemnumber_list, key=lambda k: k[1], reverse = True)
+        print keys
+        self.popItems = np.array(keys)[:, 0]
+        print self.popItems
+
 
     def save(self):
         t = pd.DataFrame(self.user_recommend)
@@ -42,16 +44,16 @@ class TopN():
 
 
     def predict(self, u, item):
-        if item in self.popItems[:self.n-1]:
+        if item in self.popItems[:self.n]:
             return 5
         else:
             return 1
 
     def recommend(self, u):
         if self.recommend_new == 0:
-            result = np.array(self.popItems[:self.n-1])
+            result = np.array(self.popItems[:self.n])
         else:
-            result = np.array([i for i in self.popItems if i not in self.user_purchased_item_dict[u]])[:self.n-1]
+            result = np.array([i for i in self.popItems if i not in self.user_purchased_item_dict[u]])[:self.n]
         return result
 
     def score(self, log):
