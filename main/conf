@@ -12,7 +12,7 @@ all = TopN|BiasedFM|BPR
 n = [50]
 display = [1]
 recommend_new = [1]
-main_evaluation = f1
+main_evaluation = ['f1']
 #value: f1, hit, ndcg, p, r, rmse
 
 
@@ -21,7 +21,7 @@ n = [5]
 neighborNum = [50]
 display = [1]
 recommend_new = [1]
-main_evaluation = f1
+main_evaluation = ['f1']
 #value: f1, hit, ndcg, p, r, rmse
 
 [BiasedFM]
@@ -34,7 +34,7 @@ iter = [500]
 display = [0]
 recommend_new = [1]
 number_of_test_seen = [1000]
-main_evaluation = f1
+main_evaluation = ['f1']
 #value: f1, hit, ndcg, p, r, rmse
 
 [BPR]
@@ -49,7 +49,7 @@ iter = [500]
 display = [1]
 recommend_new = [1]
 number_of_test_seen = [1000]
-main_evaluation = f1
+main_evaluation = ['f1']
 #value: f1, hit, ndcg, p, r, rmse
 
 [ItemCF]
@@ -57,7 +57,7 @@ n = [5]
 neighborNum = [20]
 display = [1]
 recommend_new = [1]
-main_evaluation = f1
+main_evaluation = ['f1']
 #value: f1, hit, ndcg, p, r, rmse
 
 [ECC]
@@ -79,7 +79,7 @@ recommend_new = [1]
 n = [50]
 display = [1]
 recommend_new = [1]
-main_evaluation = f1
+main_evaluation = ['f1']
 #value: f1, hit, ndcg, p, r, rmse
 
 
