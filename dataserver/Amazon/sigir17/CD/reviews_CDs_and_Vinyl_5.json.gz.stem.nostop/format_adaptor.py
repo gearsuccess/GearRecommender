@@ -15,6 +15,7 @@ class Format():
 
         self.true_rating_dict = dict()
         self.true_purchased_dict = dict()
+        self.true_item_purchased_user_dict = dict()
 
         user_names = pd.read_csv("users.txt", names = ['name'])
         index = 0
@@ -60,8 +61,14 @@ class Format():
             else:
                 self.true_purchased_dict[user_index].append(item_index)
 
+            if item_index not in self.true_item_purchased_user_dict:
+                self.true_item_purchased_user_dict[item_index] = [user_index]
+            else:
+                self.true_item_purchased_user_dict[item_index].append(user_index)
+
         pickle.dump(self.user_index_dict, open('..\uiDict', 'wb'))
         pickle.dump(self.item_index_dict, open('..\iiDict', 'wb'))
+
         pickle.dump(self.user_purchased_item_dict, open('..\upiTrainDict', 'wb'))
         pickle.dump(self.item_purchased_user_dict, open('..\ipuTrainDict', 'wb'))
         pickle.dump(self.user_item_rating_dict, open('..\uiraTrainDict', 'wb'))
@@ -69,21 +76,33 @@ class Format():
 
         pickle.dump(self.true_rating_dict, open('..\uiraTestDict', 'wb'))
         pickle.dump(self.true_purchased_dict, open('..\upiTestDict', 'wb'))
+        pickle.dump(self.true_item_purchased_user_dict, open('..\ipuTestDict', 'wb'))
 
     def test(self):
-        self.user_index_dict = pickle.load(open('..\uiDict', 'rb'))
-        self.item_index_dict = pickle.load(open('..\iiDict', 'rb'))
-        self.user_purchased_item_dict = pickle.load(open('..\upiTrainDict', 'rb'))
-        self.item_purchased_user_dict = pickle.load(open('..\ipuTrainDict', 'rb'))
-        self.user_item_rating_dict = pickle.load(open('..\uiraTrainDict', 'rb'))
+        user_index_dict = pickle.load(open('..\uiDict', 'rb'))
+        item_index_dict = pickle.load(open('..\iiDict', 'rb'))
+
+        user_purchased_item_dict = pickle.load(open('..\upiTrainDict', 'rb'))
+        item_purchased_user_dict = pickle.load(open('..\ipuTrainDict', 'rb'))
+        user_item_rating_dict = pickle.load(open('..\uiraTrainDict', 'rb'))
+
+        true_purchased_dict = pickle.load(open('..\upiTestDict', 'rb'))
+        true_item_purchased_user_dict = pickle.load(open('..\ipuTestDict', 'rb'))
+        true_rating_dict = pickle.load(open('..\uiraTestDict', 'rb'))
 
 
-        self.true_rating_dict = pickle.load(open('..\uiraTestDict', 'r'))
-        self.true_purchased_dict = pickle.load(open('..\upiTestDict', 'r'))
+        print len(user_purchased_item_dict.keys())
+        print len(item_purchased_user_dict.keys())
+        print len(user_item_rating_dict.keys())
 
-        print len(self.item_purchased_user_dict.keys())
+        print len(true_purchased_dict.keys())
+        print len(true_item_purchased_user_dict.keys())
+        print len(true_rating_dict.keys())
+
+
+
 
 if __name__ == "__main__":
     f = Format()
-    f.generate_data()
+    #f.generate_data()
     f.test()

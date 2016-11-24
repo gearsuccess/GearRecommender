@@ -98,25 +98,26 @@ class BPR():
         self.user_factors = np.array([[(0.1 * random.random() / temp) for j in range(self.factors)] for i in range(self.user_count)])
         self.item_factors = np.array([[(0.1 * random.random() / temp) for j in range(self.factors)] for i in range(self.item_count)])
 
-        self.loss_sample_number = 100000
-        self.loss_samples = []
-        for num in range(self.loss_sample_number):
+        self.update_sample_number = 100000
+        self.update_samples = []
+        for num in range(self.update_sample_number):
             u = random.randint(0,self.user_count-1)
             if self.user_purchased_item_dict.has_key(u):
                 i = random.choice(self.user_purchased_item_dict[u])
                 j = random.randint(0, self.item_count-1)
                 while j in self.user_purchased_item_dict[u]:
                     j = random.randint(0, self.item_count - 1)
-                self.loss_samples.append([u, i, j])
+                self.update_samples.append([u, i, j])
 
-        self.update_samples = []
+
+        self.loss_samples = []
         for u in range(self.user_count):
             if self.user_purchased_item_dict.has_key(u):
                 i = random.choice(self.user_purchased_item_dict[u])
                 j = random.randint(0, self.item_count - 1)
                 while j in self.user_purchased_item_dict[u]:
                     j = random.randint(0, self.item_count - 1)
-                self.update_samples.append([u, i, j])
+                self.loss_samples.append([u, i, j])
 
         old_loss = float('Inf')
 
