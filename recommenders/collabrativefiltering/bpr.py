@@ -1,4 +1,5 @@
 import pickle
+import datetime
 import numpy as np
 import logging
 import logging.config
@@ -95,11 +96,12 @@ class BPR():
 
         temp = math.sqrt(self.factors)
         self.item_bias = np.zeros(self.item_count)
-        self.user_factors = np.array([[(0.1 * random.random() / temp) for j in range(self.factors)] for i in range(self.user_count)])
-        self.item_factors = np.array([[(0.1 * random.random() / temp) for j in range(self.factors)] for i in range(self.item_count)])
+        self.user_factors = np.array([[(random.random() / temp) for j in range(self.factors)] for i in range(self.user_count)])
+        self.item_factors = np.array([[(random.random() / temp) for j in range(self.factors)] for i in range(self.item_count)])
 
         self.update_sample_number = 100000
         self.update_samples = []
+        '''
         for num in range(self.update_sample_number):
             u = random.randint(0,self.user_count-1)
             if self.user_purchased_item_dict.has_key(u):
@@ -108,28 +110,38 @@ class BPR():
                 while j in self.user_purchased_item_dict[u]:
                     j = random.randint(0, self.item_count - 1)
                 self.update_samples.append([u, i, j])
-
+        '''
+        for u in range(self.user_count):
+            if self.user_purchased_item_dict.has_key(u):
+                for i in self.user_purchased_item_dict[u]:
+                    j = random.randint(0, self.item_count - 1)
+                    while j in self.user_purchased_item_dict[u]:
+                        j = random.randint(0, self.item_count - 1)
+                    self.update_samples.append([u, i, j])
 
         self.loss_samples = []
         for u in range(self.user_count):
             if self.user_purchased_item_dict.has_key(u):
-                i = random.choice(self.user_purchased_item_dict[u])
-                j = random.randint(0, self.item_count - 1)
-                while j in self.user_purchased_item_dict[u]:
+                for i in self.user_purchased_item_dict[u]:
                     j = random.randint(0, self.item_count - 1)
-                self.loss_samples.append([u, i, j])
+                    while j in self.user_purchased_item_dict[u]:
+                        j = random.randint(0, self.item_count - 1)
+                    self.loss_samples.append([u, i, j])
 
         old_loss = float('Inf')
 
         for it in xrange(self.iter):
             self.bpr_logger.info('starting iteration {0}'.format(it))
+            s = datetime.datetime.now()
             for u, i, j in self.update_samples:
                 self.update_factors(u, i, j)
+            e = datetime.datetime.now()
+            self.bpr_logger.info('iteration time cost: ' + str(e - s))
 
+            current_loss = self.loss()
+            self.bpr_logger.info('training loss: ' + str(current_loss))
             if (it+1) % self.number_of_test_seen == 0:
-                current_loss = self.score(1)[1]
-            else:
-                current_loss = self.score(0)
+                self.score()
 
             if current_loss - old_loss > 0 or abs(current_loss - old_loss) < 0.01:
                 self.bpr_logger.info('converge!!')
@@ -137,6 +149,7 @@ class BPR():
             else:
                 old_loss = current_loss
                 self.learning_rate *= 0.9
+
         if it == self.iter - 1:
             self.bpr_logger.info('training end!')
 
@@ -155,6 +168,7 @@ class BPR():
 
     def predict(self,user,item):
         result = self.item_bias[item] + np.dot(self.user_factors[user], self.item_factors[item])
+        '''
         if result > 5:
             return 5
         else:
@@ -162,48 +176,54 @@ class BPR():
                 return 1
             else:
                 return result
+        '''
+        return result
 
     def recommend(self, u):
         candidate_ratings = np.array([self.predict(u, i) for i in range(self.item_count)])
         candidate_items = np.argsort(candidate_ratings)[-1::-1]
         if self.recommend_new == 0:
             result = candidate_items[:self.TopN]
+            result_ratings = candidate_ratings[result]
         else:
             new_items = np.array([i for i in candidate_items if i not in self.user_purchased_item_dict[u]])
             result = new_items[:self.TopN]
-        return result
+            result_ratings = candidate_ratings[result]
+        return result, result_ratings
 
-    def score(self, final_score):
-        current_loss = self.loss()
-        if final_score:
-            e = Eval()
-            predict_rating_list = []
-            true_rating_list = []
-            predict_top_n = []
-            true_purchased = []
-            self.user_recommend = []
+    def score(self):
+        e = Eval()
+        predict_rating_list = []
+        true_rating_list = []
+        predict_top_n = []
+        true_purchased = []
+        self.user_recommend = []
+        trec_output = []
 
-            for (ui, rating) in self.true_rating_dict.items():
-                user = int(ui.split('##')[0])
-                item = int(ui.split('##')[1])
-                predict_rating_list.append(self.predict(user, item))
-                true_rating_list.append(rating)
+        for (ui, rating) in self.true_rating_dict.items():
+            user = int(ui.split('##')[0])
+            item = int(ui.split('##')[1])
+            predict_rating_list.append(self.predict(user, item))
+            true_rating_list.append(rating)
 
-            for (u, items) in self.true_purchased_dict.items():
-                recommended_item = self.recommend(u)
-                predict_top_n.append(recommended_item)
-                self.user_recommend.append([u, recommended_item])
-                true_purchased.append(items)
+        for (u, items) in self.true_purchased_dict.items():
+            recommended_item, recommended_item_ratings = self.recommend(u)
+            predict_top_n.append(recommended_item)
 
+            for i in range(len(recommended_item)):
+                row = [self.user_index_dict[u],'Q0',self.item_index_dict[recommended_item[i]],i+1,recommended_item_ratings[i],'BPR']
+                trec_output.append(row)
+            self.user_recommend.append([u, recommended_item])
+            true_purchased.append(items)
 
-            rmse = e.RMSE(predict_rating_list, true_rating_list)
-            f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
-            self.bpr_logger.info(','.join(('test:', 'f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r:'+str(r) )))
-            return eval(self.main_evaluation)
+        t = pd.DataFrame(trec_output)
+        t.to_csv('trec_output',sep=' ')
 
-        else:
-            self.bpr_logger.info('training loss: ' + str(current_loss))
-            return current_loss
+        rmse = e.RMSE(predict_rating_list, true_rating_list)
+        f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
+        self.bpr_logger.info(','.join(('test:', 'f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r:'+str(r) )))
+        return eval(self.main_evaluation)
+
 
 
 

@@ -65,3 +65,21 @@
 2016-11-21 14:04:38,950 - biasedFM - INFO - training loss: 40.9826970254
 2016-11-21 14:04:38,951 - biasedFM - INFO - iteration: 9
 2016-11-21 14:04:50,332 - biasedFM - INFO - iteration time cost: 0:00:11.380000
+2016-12-02 14:55:11,914 - biasedFM - INFO - Factors: 50 learningrate: 0.01 userregular: 0.0001 itemregular: 0.001 iter:500 TopN:50
+2016-12-02 14:55:11,943 - biasedFM - INFO - Factors: 50 learningrate: 0.01 userregular: 0.0001 itemregular: 0.01 iter:500 TopN:50
+2016-12-02 14:55:12,049 - biasedFM - INFO - Factors: 50 learningrate: 0.01 userregular: 0.001 itemregular: 0.01 iter:500 TopN:50
+2016-12-02 14:55:12,084 - biasedFM - INFO - Factors: 50 learningrate: 0.01 userregular: 0.01 itemregular: 0.0001 iter:500 TopN:50
+2016-12-02 14:55:12,535 - biasedFM - INFO - Factors: 50 learningrate: 0.01 userregular: 0.0001 itemregular: 0.0001 iter:500 TopN:50
+2016-12-02 14:55:12,617 - biasedFM - INFO - Factors: 50 learningrate: 0.01 userregular: 0.001 itemregular: 0.0001 iter:500 TopN:50
+2016-12-02 14:55:12,813 - biasedFM - INFO - Factors: 50 learningrate: 0.01 userregular: 0.001 itemregular: 0.001 iter:500 TopN:50
+2016-12-02 14:55:12,819 - biasedFM - INFO - Factors: 50 learningrate: 0.01 userregular: 0.01 itemregular: 0.001 iter:500 TopN:50
+2016-12-02 14:55:16,904 - biasedFM - INFO - Factors: 50 learningrate: 0.01 userregular: 0.01 itemregular: 0.01 iter:500 TopN:50
+2016-12-02 14:55:28,589 - biasedFM - INFO - iteration: 0
+2016-12-02 14:55:28,674 - biasedFM - INFO - iteration: 0
+2016-12-02 14:55:28,736 - biasedFM - INFO - iteration: 0
+2016-12-02 14:55:28,776 - biasedFM - INFO - iteration: 0
+2016-12-02 14:55:28,779 - biasedFM - INFO - iteration: 0
+2016-12-02 14:55:28,789 - biasedFM - INFO - iteration: 0
+2016-12-02 14:55:28,956 - biasedFM - INFO - iteration: 0
+2016-12-02 14:55:28,930 - biasedFM - INFO - iteration: 0
+2016-12-02 14:55:42,848 - biasedFM - INFO - iteration: 0

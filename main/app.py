@@ -9,6 +9,7 @@ import random
 import logging
 import logging.config
 import logging.handlers
+import pandas as pd
 
 class App:
 
@@ -34,10 +35,10 @@ class App:
         parameters = process_parameters[1]
 
         if int(self.alg_config.general_settings['n_fold']) == 0:
-            path = os.path.join(self.path, 'no_validation/')
+            path = os.path.join(self.path, 'no_validation\\')
             alg = AlgFactory.create(alg_name, path, parameters)
             alg.fit()
-            r = alg.score(1)
+            r = alg.score()
             alg.save()
             e = datetime.datetime.now()
             self.lock.acquire()
@@ -49,7 +50,7 @@ class App:
                 path = os.path.join(self.path, str(i))
                 alg = AlgFactory.create(alg_name, path, parameters)
                 alg.fit()
-                r[i] = alg.score(1)
+                r[i] = alg.score()
                 alg.save()
             r = r.sum() / int(self.alg_config.general_settings['n_fold'])
             e = datetime.datetime.now()
@@ -77,7 +78,12 @@ class App:
 
 
 if __name__ == '__main__':
-    random.seed(1)
-    np.random.seed = 1
+
+    random.seed(10)
+    np.random.seed = 10
     app = App()
     app.gear_go()
+
+
+
+

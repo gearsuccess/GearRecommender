@@ -12,6 +12,8 @@
     <orderEntry type="module" module-name="MLTool" />
     <orderEntry type="module" module-name="FLVR" />
     <orderEntry type="module" module-name="ReviewMiner" />
+    <orderEntry type="module" module-name="ReviewMiner" />
+    <orderEntry type="module" module-name="GearDeepRecommender" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="Nosetests" />
