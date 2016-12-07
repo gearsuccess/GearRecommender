@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b18db047-48cd-4c26-8f8b-16617e14c9f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/app.py" afterPath="$PROJECT_DIR$/main/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/conf" afterPath="$PROJECT_DIR$/main/conf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py" afterPath="$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py" afterPath="$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/main.log" afterPath="$PROJECT_DIR$/results/main.log" />
     </list>
     <ignored path="GearRecommender.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +29,13 @@
         <entry file="file://$PROJECT_DIR$/main/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="26" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding>
+                <element signature="e#284#2680#0" expanded="false" />
                 <element signature="e#312#487#0" expanded="false" />
                 <element signature="e#525#565#0" expanded="false" />
                 <element signature="e#606#728#0" expanded="false" />
+                <element signature="e#785#2116#0" expanded="false" />
                 <element signature="e#2149#2595#0" expanded="false" />
                 <element signature="e#2629#2637#0" expanded="false" />
                 <element signature="e#2672#2680#0" expanded="false" />
@@ -44,32 +44,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="biased_mf.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py">
+      <file leaf-file-name="training_process.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/visualization/training_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1504588">
-              <caret line="11" column="27" selection-start-line="10" selection-start-column="8" selection-end-line="11" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#4941#5152#0" expanded="false" />
-                <element signature="e#5190#5734#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bpr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding>
-                <element signature="e#2561#3658#0" expanded="false" />
-                <element signature="e#3688#4433#0" expanded="false" />
-                <element signature="e#7127#7723#0" expanded="false" />
-                <element signature="e#7766#8058#0" expanded="false" />
-                <element signature="e#8096#8640#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.39523">
+              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,12 +114,12 @@
         <option value="$PROJECT_DIR$/main/log_conf" />
         <option value="$PROJECT_DIR$/evaluation/evaluation.py" />
         <option value="$PROJECT_DIR$/dataserver/Amazon/Musical_Instruments/no_validation/change.py" />
-        <option value="$PROJECT_DIR$/main/conf" />
-        <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py" />
         <option value="$PROJECT_DIR$/main/app.py" />
         <option value="$PROJECT_DIR$/results/biased_mf_bi100" />
         <option value="$PROJECT_DIR$/results/biased_mf_trec_output100" />
+        <option value="$PROJECT_DIR$/main/conf" />
         <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py" />
+        <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py" />
       </list>
     </option>
   </component>
@@ -208,6 +188,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GearRecommender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GearRecommender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GearRecommender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visualization" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -519,15 +513,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1176" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32481363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22630458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28842315" sideWeight="0.48296058" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42015967" sideWeight="0.22630458" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3782435" sideWeight="0.22630458" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273453" sideWeight="0.489418" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30538923" sideWeight="0.6730564" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42015967" sideWeight="0.7736954" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4760479" sideWeight="0.7736954" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4189189" sideWeight="0.418239" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -868,16 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visualization/training_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40527952">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataserver/Amazon/DataProcess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.8238535">
@@ -894,14 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26605505">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/biased_mf_bi100">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -923,21 +899,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="26" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
-          <folding>
-            <element signature="e#312#487#0" expanded="false" />
-            <element signature="e#525#565#0" expanded="false" />
-            <element signature="e#606#728#0" expanded="false" />
-            <element signature="e#2149#2595#0" expanded="false" />
-            <element signature="e#2629#2637#0" expanded="false" />
-            <element signature="e#2672#2680#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -951,8 +912,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/results/main.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5963303">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="83" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05321101">
+          <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -960,7 +929,7 @@
     <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
           <folding>
             <element signature="e#2561#3658#0" expanded="false" />
             <element signature="e#3688#4433#0" expanded="false" />
@@ -973,13 +942,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1504588">
-          <caret line="11" column="27" selection-start-line="10" selection-start-column="8" selection-end-line="11" selection-end-column="27" />
+        <state vertical-scroll-proportion="1.0674846">
+          <caret line="160" column="141" selection-start-line="160" selection-start-column="141" selection-end-line="160" selection-end-column="141" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#4941#5152#0" expanded="false" />
             <element signature="e#5190#5734#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding>
+            <element signature="e#284#2680#0" expanded="false" />
+            <element signature="e#312#487#0" expanded="false" />
+            <element signature="e#525#565#0" expanded="false" />
+            <element signature="e#606#728#0" expanded="false" />
+            <element signature="e#785#2116#0" expanded="false" />
+            <element signature="e#2149#2595#0" expanded="false" />
+            <element signature="e#2629#2637#0" expanded="false" />
+            <element signature="e#2672#2680#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualization/training_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39523">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

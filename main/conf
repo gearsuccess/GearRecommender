@@ -1,5 +1,5 @@
 [general]
-inputPath = E:\Project\GearRecommender\dataserver\Amazon\Musical_Instruments
+inputPath = E:\Project\GearRecommender\dataserver\Amazon\sigir17\CD
 n_fold = 0
 
 

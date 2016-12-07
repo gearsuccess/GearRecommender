@@ -155,7 +155,10 @@ class BiasedMF():
             recommended_item, recommended_item_ratings = self.recommend(u)
             predict_top_n.append(recommended_item)
             for i in range(len(recommended_item)):
-                row = [self.user_index_dict[u],'Q0',self.item_index_dict[recommended_item[i]],i+1,recommended_item_ratings[i],'BiasedMF']
+                if recommended_item[i] in items:
+                    row = [self.user_index_dict[u],'Q0',self.item_index_dict[recommended_item[i]],i+1,recommended_item_ratings[i], 'BiasedMF', 'right']
+                else:
+                    row = [self.user_index_dict[u],'Q0',self.item_index_dict[recommended_item[i]],i+1,recommended_item_ratings[i], 'BiasedMF', 'wrong']
                 self.trec_output.append(row)
             true_purchased.append(items)
 
