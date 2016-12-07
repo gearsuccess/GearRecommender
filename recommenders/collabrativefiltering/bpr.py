@@ -19,11 +19,12 @@ class BPR():
         self.path = path
         self.TopN = parameters['n']
         self.recommend_new = parameters['recommend_new']
-        self.insights = parameters['display']
+        self.visualization = parameters['visualization']
         self.number_of_test_seen = parameters['number_of_test_seen']
         self.main_evaluation = parameters['main_evaluation']
 
 
+        self.results = []
 
         logging.config.fileConfig('log_conf')
         self.bpr_logger = logging.getLogger('bpr')
@@ -36,7 +37,6 @@ class BPR():
 
     def load_data(self, path):
         print path
-
         self.user_index_dict = pickle.load(open(path + 'uiDict', 'rb'))
         self.item_index_dict = pickle.load(open(path + 'iiDict', 'rb'))
         #self.train_data = pd.read_csv(path + 'eccTrainData')
@@ -93,7 +93,6 @@ class BPR():
         return ranking_loss + 0.5*complexity
 
     def fit(self):
-
         temp = math.sqrt(self.factors)
         self.item_bias = np.zeros(self.item_count)
         self.user_factors = np.array([[(random.random() / temp) for j in range(self.factors)] for i in range(self.user_count)])
@@ -142,7 +141,7 @@ class BPR():
             self.bpr_logger.info('training loss: ' + str(current_loss))
             if (it+1) % self.number_of_test_seen == 0:
                 self.score()
-                self.save()
+                self.save(it+1)
 
             if current_loss - old_loss > 0 or abs(current_loss - old_loss) < 0.01:
                 self.bpr_logger.info('converge!!')
@@ -151,17 +150,19 @@ class BPR():
                 old_loss = current_loss
                 self.learning_rate *= 0.9
 
-    def save(self):
+    def save(self, itereation):
         t = pd.DataFrame(self.item_bias)
-        t.to_csv('../results/bpr_item_bias')
+        t.to_csv('../results/bpr_item_bias'+itereation)
         t = pd.DataFrame(self.user_factors)
-        t.to_csv('../results/bpr_user_factors')
+        t.to_csv('../results/bpr_user_factors'+itereation)
         t = pd.DataFrame(self.item_factors)
-        t.to_csv('../results/bpr_item_factors')
+        t.to_csv('../results/bpr_item_factors'+itereation)
         t = pd.DataFrame(self.loss_samples)
-        t.to_csv('../results/bpr_loss_samples')
+        t.to_csv('../results/bpr_loss_samples'+itereation)
+        t = pd.DataFrame(self.results)
+        t.to_csv('../results/results'+itereation)
         t = pd.DataFrame(self.trec_output)
-        t.to_csv('../results/bpr_trec_output', sep=' ')
+        t.to_csv('../results/bpr_trec_output'+itereation, sep=' ')
 
 
     def predict(self,user,item):
@@ -213,8 +214,11 @@ class BPR():
             true_purchased.append(items)
 
         rmse = e.RMSE(predict_rating_list, true_rating_list)
-        f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
-        self.bpr_logger.info(','.join(('test:', 'f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r:'+str(r))))
+        f1, p, r, hit_ratio = e.F1_score_Hit_ratio(predict_top_n, true_purchased)
+        ndcg = e.NDGG_k(predict_top_n, true_purchased)
+
+        self.results.append([rmse, f1, p, r, hit_ratio, ndcg])
+        self.bpr_logger.info(','.join(('test:', 'f1:'+str(array(f1).mean()), 'hit:'+str(hit_ratio), 'ndcg:'+str(ndcg), 'p:'+str(array(p).mean()), 'r:'+str(array(r).mean()), 'rmse:' + str(rmse))))
         return eval(self.main_evaluation)
 
 

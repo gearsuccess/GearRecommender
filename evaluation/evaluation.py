@@ -35,9 +35,9 @@ class Eval:
         co_length = []
         re_length = []
         pu_length = []
-        self.p = []
-        self.r = []
-        self.f = []
+        p = []
+        r = []
+        f = []
         hit_number = 0
         for i in range(user_number):
             temp = []
@@ -60,16 +60,15 @@ class Eval:
                 r_t = 0
             else:
                 r_t = co_length[i] / pu_length[i]
-            self.p.append(p_t)
-            self.r.append(r_t)
+            p.append(p_t)
+            r.append(r_t)
             if p_t != 0 or r_t != 0:
-                self.f.append(2*p_t*r_t / (p_t+r_t))
+                f.append(2*p_t*r_t / (p_t+r_t))
             else:
-                self.f.append(0)
+                f.append(0)
 
-        self.hit_ratio = hit_number / user_number
-        self.f1 = array(self.f).mean()
-        return self.f1, self.hit_ratio
+        hit_ratio = hit_number / user_number
+        return f, p, r, hit_ratio
 
     def NDGG_k(self, recommend_list, purchased_list):
         """计算NDCG值。
@@ -95,8 +94,8 @@ class Eval:
             else:
                 temp = temp / Z_u
             u_ndgg.append(temp)
-        self.NDCG = array(u_ndgg).mean()
-        return self.NDCG
+        NDCG = array(u_ndgg).mean()
+        return NDCG
 
     def evalAll(self,recommend_list, purchased_list):
         """计算F1和NDCG值。
@@ -108,9 +107,9 @@ class Eval:
         输出：
             F1，NDCG值。
         """
-        self.F1_score_Hit_ratio(recommend_list, purchased_list)
-        self.NDGG_k(recommend_list, purchased_list)
-        return self.f1, self.hit_ratio, self.NDCG, array(self.p).mean(), array(self.r).mean()
+        f1, p, r, hit_ratio = self.F1_score_Hit_ratio(recommend_list, purchased_list)
+        NDCG = self.NDGG_k(recommend_list, purchased_list)
+        return array(f1).mean(), hit_ratio, NDCG, array(p).mean(), array(r).mean()
 
 
 
