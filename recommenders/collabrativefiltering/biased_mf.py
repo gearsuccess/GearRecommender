@@ -4,27 +4,13 @@ from visualization.training_process import *
 import pickle
 import logging
 import logging.handlers
-import copy
+
 
 class BiasedMF():
     def __init__(self, path, parameters):
-
-        self.user_index_dict = pickle.load(open(path + 'uiDict', 'rb'))
-        self.item_index_dict = pickle.load(open(path + 'iiDict', 'rb'))
-        #self.train_data = pd.read_csv(path + 'eccTrainData')
-        self.user_purchased_item_dict = pickle.load(open(path + 'upiTrainDict', 'rb'))
-        self.item_purchased_user_dict = pickle.load(open(path + 'ipuTrainDict', 'rb'))
-        self.user_item_rating_dict = pickle.load(open(path + 'uiraTrainDict', 'rb'))
-
-        self.true_rating_dict = pickle.load(open(path + 'uiraTestDict', 'rb'))
-        self.true_purchased_dict = pickle.load(open(path + 'upiTestDict', 'rb'))
-
-        self.user_count = len(self.user_index_dict.keys())
-        self.item_count = len(self.item_index_dict.keys())
-
-        print self.user_count, self.item_count
-
-
+        random.seed(10)
+        np.random.seed = 10
+        self.load_data(path)
         self.factors = parameters['factors']
         self.learning_rate = parameters['learningrate']
         self.user_regular = parameters['userregular']
@@ -42,6 +28,21 @@ class BiasedMF():
         self.biasedMF_logger.info('Factors: '+str(self.factors) +' learningrate: '+ str(self.learning_rate)+
                                   ' userregular: '+str(self.user_regular) + ' itemregular: '+str(self.item_regular)+
                                   ' iter:' + str(self.iter)+' TopN:' + str(self.TopN))
+
+    def load_data(self, path):
+        self.user_index_dict = pickle.load(open(path + 'uiDict', 'rb'))
+        self.item_index_dict = pickle.load(open(path + 'iiDict', 'rb'))
+
+        self.user_purchased_item_dict = pickle.load(open(path + 'upiTrainDict', 'rb'))
+        self.item_purchased_user_dict = pickle.load(open(path + 'ipuTrainDict', 'rb'))
+        self.user_item_rating_dict = pickle.load(open(path + 'uiraTrainDict', 'rb'))
+
+        self.true_rating_dict = pickle.load(open(path + 'uiraTestDict', 'rb'))
+        self.true_purchased_dict = pickle.load(open(path + 'upiTestDict', 'rb'))
+
+        self.user_count = len(self.user_index_dict.keys())
+        self.item_count = len(self.item_index_dict.keys())
+        print self.user_count, self.item_count
 
     def fit(self):
         self.mu = np.array([r for (ui, r) in self.user_item_rating_dict.items()]).mean()
@@ -73,9 +74,8 @@ class BiasedMF():
             self.biasedMF_logger.info('training loss: ' + str(current_loss))
 
             if (step+1) % self.number_of_test_seen == 0:
-                current_loss = self.score()
+                self.score()
                 self.save(str(step+1))
-
 
             if current_loss > self.pre_loss or abs(current_loss - self.pre_loss) < 0.01:
                 self.biasedMF_logger.info('converge!!')
@@ -165,7 +165,7 @@ class BiasedMF():
 
         self.results.append([rmse, f1, p, r, hit_ratio, ndcg])
         self.biasedMF_logger.info(','.join(('test:', 'f1:'+str(array(f1).mean()), 'hit:'+str(hit_ratio), 'ndcg:'+str(ndcg), 'p:'+str(array(p).mean()), 'r:'+str(array(r).mean()), 'rmse:' + str(rmse))))
-        return eval(self.main_evaluation)
+        return [rmse, array(f1).mean(), array(p).mean(), array(r).mean(), hit_ratio, ndcg]
 
 
 

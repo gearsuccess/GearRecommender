@@ -37,11 +37,11 @@ class App:
             path = os.path.join(self.path, 'no_validation\\')
             alg = AlgFactory.create(alg_name, path, parameters)
             alg.fit()
-            r = alg.score()
-            alg.save()
+            r_test = alg.score()
+            alg.save('final')
             e = datetime.datetime.now()
             self.lock.acquire()
-            self.main_logger.info(str([alg_name+'on_test_set', r, parameters])+' training end! time cost:'+str(e-s))
+            self.main_logger.info(str([alg_name+'on_test_set', r_test, parameters])+' training end! time cost:'+str(e-s))
             self.lock.release()
         else:
             r = np.zeros(int(self.alg_config.general_settings['n_fold']))
@@ -49,12 +49,12 @@ class App:
                 path = os.path.join(self.path, str(i))
                 alg = AlgFactory.create(alg_name, path, parameters)
                 alg.fit()
-                r[i] = alg.score()
+                r[i] = alg.score('final')
                 alg.save()
-            r = r.sum() / int(self.alg_config.general_settings['n_fold'])
+            r_validation = np.array(r).sum(0) / int(self.alg_config.general_settings['n_fold'])
             e = datetime.datetime.now()
             self.lock.acquire()
-            self.main_logger.info(str([alg_name+'on_validation_set', r, parameters])+' training end! time cost:'+str(e-s))
+            self.main_logger.info(str([alg_name+'on_validation_set', r_validation, parameters])+' training end! time cost:'+str(e-s))
             self.lock.release()
 
     def gear_go(self):
@@ -77,8 +77,6 @@ class App:
 
 
 if __name__ == '__main__':
-    random.seed(10)
-    np.random.seed = 10
     app = App()
     app.gear_go()
 

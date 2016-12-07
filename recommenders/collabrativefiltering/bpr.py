@@ -1,4 +1,3 @@
-import pickle
 import datetime
 import numpy as np
 import logging
@@ -8,6 +7,8 @@ from evaluation.evaluation import *
 
 class BPR():
     def __init__(self, path, parameters):
+        random.seed(10)
+        np.random.seed = 10
         self.load_data(path)
         self.factors = parameters['factors']
         self.learning_rate = parameters['learning_rate']
@@ -39,7 +40,7 @@ class BPR():
         print path
         self.user_index_dict = pickle.load(open(path + 'uiDict', 'rb'))
         self.item_index_dict = pickle.load(open(path + 'iiDict', 'rb'))
-        #self.train_data = pd.read_csv(path + 'eccTrainData')
+
         self.user_purchased_item_dict = pickle.load(open(path + 'upiTrainDict', 'rb'))
         self.item_purchased_user_dict = pickle.load(open(path + 'ipuTrainDict', 'rb'))
         self.user_item_rating_dict = pickle.load(open(path + 'uiraTrainDict', 'rb'))
@@ -164,7 +165,6 @@ class BPR():
         t = pd.DataFrame(self.trec_output)
         t.to_csv('../results/bpr_trec_output'+itereation, sep=' ')
 
-
     def predict(self,user,item):
         result = self.item_bias[item] + np.dot(self.user_factors[user], self.item_factors[item])
         '''
@@ -219,7 +219,7 @@ class BPR():
 
         self.results.append([rmse, f1, p, r, hit_ratio, ndcg])
         self.bpr_logger.info(','.join(('test:', 'f1:'+str(array(f1).mean()), 'hit:'+str(hit_ratio), 'ndcg:'+str(ndcg), 'p:'+str(array(p).mean()), 'r:'+str(array(r).mean()), 'rmse:' + str(rmse))))
-        return eval(self.main_evaluation)
+        return [rmse, f1, p, r, hit_ratio, ndcg]
 
 
 
