@@ -2,14 +2,14 @@ Overview:
 GearRecommender is a python library for recommendation system. It aims to provide a convenient tool for researchers.
 
 Algorithms:
-There are 5 classes in this library:
+There are 5 kinds of recommendation algorithms in this library:
 1.collaborative filtering methods
 2.content based methods
 3.context aware methods
 4.hybrid methods
 5.other methods
 
-For collaborative filtering methods, we implement item-based cf, user-based cf, BPR,etc. For other categories, they are still under development.
+For collaborative filtering methods, we implement biasedMF, BPR,etc. Other models are still under development.
 
 How to run
 1. Download our library
@@ -29,16 +29,22 @@ Data Format:
 
 General_data:
 
-'uiDict'
-'iiDict'
+'uiDict' : a dict that index users. key: user_index, value: user_name
+'iiDict' : a dict that index items. key: item_index, value: item_name
+'wiDict' : a dict that index words. key: word, value: word_index
+'iwDict' : a dict that index words. key: word_index, value: word
+
 
 Train_data:
 
-'upiTrainDict'
-'ipuTrainDict'
-'uiraTrainDict'
+'upiTrainDict' : key: user_index, value: a list of the user's purchased item_indexes
+'ipuTrainDict' : key: item_index, value: a list of user_indexes purchased the item_index
+'uiraTrainDict': key: user_index##item_index, value: the rating user_index scores on item_index
+'uirTrainDict' : key: user_index##item_index, value: the string of words (separated by '@') user_index comments on item_index
+
 
 Test_data:
 
-'uiraTestDict'
-'upiTestDict'
+'uiraTestDict' : key: user_index##item_index, value: the rating user_index scores on item_index
+'upiTestDict' : key: user_index, value: a list of the user's purchased item_indexes
+'uirTestDict' : key: user_index##item_index, value: the string of words (separated by '@') user_index comments on item_index

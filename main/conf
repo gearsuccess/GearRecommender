@@ -6,7 +6,7 @@ n_fold = 0
 
 
 [algorithms]
-all = TopN|BiasedFM|BPR
+all = BPR
 
 [TopN]
 n = [50]
