@@ -1,8 +1,8 @@
 [loggers]
-keys=root,main,biasedFM,bpr,usercf,itemcf,average,topn
+keys=root,main,biasedMF,bpr,usercf,itemcf,average,topn
 
 [handlers]
-keys=consoleHandler,fileHandler,biasedFMFileHandler,bprFileHandler,usercfFileHandler,itemcfFileHandler,averageFileHandler,topnFileHandler
+keys=consoleHandler,fileHandler,biasedMFFileHandler,bprFileHandler,usercfFileHandler,itemcfFileHandler,averageFileHandler,topnFileHandler
 
 [formatters]
 keys=fmt
@@ -16,10 +16,10 @@ level=DEBUG
 qualname=main
 handlers=fileHandler
 
-[logger_biasedFM]
+[logger_biasedMF]
 level=DEBUG
-qualname=biasedFM
-handlers=biasedFMFileHandler
+qualname=biasedMF
+handlers=biasedMFFileHandler
 
 [logger_bpr]
 level=DEBUG
@@ -59,11 +59,11 @@ level=DEBUG
 formatter=fmt
 args=('../results/main.log','w',2000000,5000,)
 
-[handler_biasedFMFileHandler]
+[handler_biasedMFFileHandler]
 class=logging.handlers.RotatingFileHandler
 level=DEBUG
 formatter=fmt
-args=('../results/biasedFM.log','w',2000000,5000,)
+args=('../results/biasedMF.log','w',2000000,5000,)
 
 [handler_bprFileHandler]
 class=logging.handlers.RotatingFileHandler
@@ -88,6 +88,7 @@ class=logging.handlers.RotatingFileHandler
 level=DEBUG
 formatter=fmt
 args=('../results/average.log','w',20000000,5000,)
+
 
 [handler_topnFileHandler]
 class=logging.handlers.RotatingFileHandler

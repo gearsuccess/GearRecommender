@@ -142,6 +142,7 @@ class BPR():
             self.bpr_logger.info('training loss: ' + str(current_loss))
             if (it+1) % self.number_of_test_seen == 0:
                 self.score()
+                self.save()
 
             if current_loss - old_loss > 0 or abs(current_loss - old_loss) < 0.01:
                 self.bpr_logger.info('converge!!')
@@ -149,9 +150,6 @@ class BPR():
             else:
                 old_loss = current_loss
                 self.learning_rate *= 0.9
-
-        if it == self.iter - 1:
-            self.bpr_logger.info('training end!')
 
     def save(self):
         t = pd.DataFrame(self.item_bias)
@@ -162,8 +160,8 @@ class BPR():
         t.to_csv('../results/bpr_item_factors')
         t = pd.DataFrame(self.loss_samples)
         t.to_csv('../results/bpr_loss_samples')
-        t = pd.DataFrame(self.user_recommend)
-        t.to_csv('../results/bpr_user_recommend')
+        t = pd.DataFrame(self.trec_output)
+        t.to_csv('../results/bpr_trec_output', sep=' ')
 
 
     def predict(self,user,item):
@@ -197,8 +195,7 @@ class BPR():
         true_rating_list = []
         predict_top_n = []
         true_purchased = []
-        self.user_recommend = []
-        trec_output = []
+        self.trec_output = []
 
         for (ui, rating) in self.true_rating_dict.items():
             user = int(ui.split('##')[0])
@@ -212,16 +209,12 @@ class BPR():
 
             for i in range(len(recommended_item)):
                 row = [self.user_index_dict[u],'Q0',self.item_index_dict[recommended_item[i]],i+1,recommended_item_ratings[i],'BPR']
-                trec_output.append(row)
-            self.user_recommend.append([u, recommended_item])
+                self.trec_output.append(row)
             true_purchased.append(items)
-
-        t = pd.DataFrame(trec_output)
-        t.to_csv('trec_output',sep=' ')
 
         rmse = e.RMSE(predict_rating_list, true_rating_list)
         f1, hit, ndcg, p, r = e.evalAll(predict_top_n, true_purchased)
-        self.bpr_logger.info(','.join(('test:', 'f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r:'+str(r) )))
+        self.bpr_logger.info(','.join(('test:', 'f1:'+str(f1), 'hit:'+str(hit), 'ndcg:'+str(ndcg), 'p:'+str(p), 'r:'+str(r))))
         return eval(self.main_evaluation)
 
 

@@ -6,7 +6,7 @@ n_fold = 0
 
 
 [algorithms]
-all = BPR
+all = BiasedMF
 
 [TopN]
 n = [50]
@@ -24,7 +24,7 @@ recommend_new = [1]
 main_evaluation = ['f1']
 #value: f1, hit, ndcg, p, r, rmse
 
-[BiasedFM]
+[BiasedMF]
 n = [50]
 factors = [50]
 learningrate = [0.01]

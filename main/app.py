@@ -78,7 +78,6 @@ class App:
 
 
 if __name__ == '__main__':
-
     random.seed(10)
     np.random.seed = 10
     app = App()

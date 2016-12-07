@@ -1,4 +1,4 @@
-from recommenders.collabrativefiltering.biased_fm import BiasedFM
+from recommenders.collabrativefiltering.biased_mf import BiasedMF
 from recommenders.collabrativefiltering.bpr import BPR
 from recommenders.collabrativefiltering.item_cf import ItemCF
 from recommenders.collabrativefiltering.user_cf import UserCF
@@ -12,8 +12,8 @@ class AlgFactory():
     def create(name, path, parameters):
         if name == 'TopN':
             return TopN(path, parameters)
-        elif name == 'BiasedFM':
-            return BiasedFM(path, parameters)
+        elif name == 'BiasedMF':
+            return BiasedMF(path, parameters)
         elif name == 'AVERAGE':
             return AVERAGE(path, parameters)
         elif name == 'UserCF':

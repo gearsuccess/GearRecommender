@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b18db047-48cd-4c26-8f8b-16617e14c9f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReadMe" afterPath="$PROJECT_DIR$/ReadMe" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommenders/collabrativefiltering/biased_fm.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/app.py" afterPath="$PROJECT_DIR$/main/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/conf" afterPath="$PROJECT_DIR$/main/conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/log_conf" afterPath="$PROJECT_DIR$/main/log_conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommenders/alg_factory.py" afterPath="$PROJECT_DIR$/recommenders/alg_factory.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py" afterPath="$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py" />
     </list>
     <ignored path="GearRecommender.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,20 +32,48 @@
         <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+              <caret line="151" column="41" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
               <folding>
                 <element signature="e#2548#3645#0" expanded="false" />
                 <element signature="e#3675#4420#0" expanded="false" />
+                <element signature="e#7595#7887#0" expanded="false" />
+                <element signature="e#7925#8469#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="format_adaptor.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dataserver/Amazon/sigir17/CD/reviews_CDs_and_Vinyl_5.json.gz.stem.nostop/format_adaptor.py">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.110512">
-              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.5806452">
+              <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+              <folding>
+                <element signature="e#2093#2539#0" expanded="false" />
+                <element signature="e#2573#2581#0" expanded="false" />
+                <element signature="e#2616#2624#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="biased_mf.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="165" column="40" selection-start-line="165" selection-start-column="40" selection-end-line="165" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -64,7 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Recommenders/CollabrativeFiltering/LFM.py" />
         <option value="$PROJECT_DIR$/Recommenders/CollabrativeFiltering/AVERAGE.py" />
         <option value="$PROJECT_DIR$/Recommenders/CollabrativeFiltering/BPMF.py" />
         <option value="$PROJECT_DIR$/Recommenders/CollabrativeFiltering/ItemCF.py" />
@@ -86,23 +115,18 @@
         <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/pmf.py" />
         <option value="$PROJECT_DIR$/recommenders/contentbased/ecc.py" />
         <option value="$PROJECT_DIR$/recommenders/contentbased/hft.py" />
-        <option value="$PROJECT_DIR$/main/log_conf" />
         <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/top_n.py" />
         <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/average.py" />
         <option value="$PROJECT_DIR$/../MLTool/xgboost/xgboost.py" />
         <option value="$PROJECT_DIR$/../MLTool/gearboost/gear_gbdt.py" />
-        <option value="$PROJECT_DIR$/recommenders/alg_factory.py" />
         <option value="$PROJECT_DIR$/display/training_process.py" />
         <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/item_cf.py" />
         <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/user_cf.py" />
         <option value="$PROJECT_DIR$/recommenders/static/average.py" />
         <option value="$PROJECT_DIR$/recommenders/static/top_n.py" />
         <option value="$PROJECT_DIR$/dataserver/Amazon/sigir17/CD/reviews_CDs_and_Vinyl_5.json.gz.stem.nostop/format_adaptor.py" />
-        <option value="$PROJECT_DIR$/main/app.py" />
-        <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/biased_fm.py" />
         <option value="$PROJECT_DIR$/evaluation/evaluation.py" />
         <option value="$PROJECT_DIR$/main/test.py" />
-        <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py" />
         <option value="$PROJECT_DIR$/../GearDeepRecommender/model/input_data.py" />
         <option value="$PROJECT_DIR$/../GearDeepRecommender/model/tensorflow_test.py" />
         <option value="$PROJECT_DIR$/../GearDeepRecommender/data/data_preprocess.py" />
@@ -113,8 +137,14 @@
         <option value="$PROJECT_DIR$/../GearDeepRecommender/model/main.py" />
         <option value="$PROJECT_DIR$/../GearDeepRecommender/model/data_util.py" />
         <option value="$PROJECT_DIR$/../GearDeepRecommender/model/ReviewEmbedding.py" />
-        <option value="$PROJECT_DIR$/main/conf" />
         <option value="$PROJECT_DIR$/ReadMe" />
+        <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/biased_fm.py" />
+        <option value="$PROJECT_DIR$/recommenders/alg_factory.py" />
+        <option value="$PROJECT_DIR$/main/log_conf" />
+        <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py" />
+        <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py" />
+        <option value="$PROJECT_DIR$/main/conf" />
+        <option value="$PROJECT_DIR$/main/app.py" />
       </list>
     </option>
   </component>
@@ -186,6 +216,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GearRecommender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GearRecommender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recommenders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GearRecommender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GearRecommender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recommenders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collabrativefiltering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GearRecommender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GearRecommender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -213,7 +289,7 @@
       <recent name="D:\Research\project\GearRecommender\Recommenders" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.DataProcess">
+  <component name="RunManager" selected="Python.app">
     <configuration default="false" name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -430,10 +506,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.DataProcess" />
-        <item index="1" class="java.lang.String" itemvalue="Python.CNRTV" />
-        <item index="2" class="java.lang.String" itemvalue="Python.data_preprocess" />
-        <item index="3" class="java.lang.String" itemvalue="Python.app" />
+        <item index="0" class="java.lang.String" itemvalue="Python.app" />
+        <item index="1" class="java.lang.String" itemvalue="Python.DataProcess" />
+        <item index="2" class="java.lang.String" itemvalue="Python.CNRTV" />
+        <item index="3" class="java.lang.String" itemvalue="Python.data_preprocess" />
         <item index="4" class="java.lang.String" itemvalue="Python.tensorflow_test" />
       </list>
     </recent_temporary>
@@ -466,21 +542,21 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3197065" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28842315" sideWeight="0.48509052" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24903475" sideWeight="0.21698113" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39671814" sideWeight="0.22012578" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30598456" sideWeight="0.6755765" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39671814" sideWeight="0.7798742" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4189189" sideWeight="0.418239" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3972056" sideWeight="0.49153438" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39671814" sideWeight="0.7830189" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273453" sideWeight="0.489418" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3972056" sideWeight="0.49153438" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881773" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -642,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommenders/alg_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.96666664">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/display/training_process.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43609023">
@@ -724,31 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/biased_fm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/log_conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8326849">
-          <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/bin/python35/Lib/urllib/request.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4917733">
           <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47727272">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -777,6 +825,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+          <folding>
+            <element signature="e#23#54#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -830,25 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31266847">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-          <folding>
-            <element signature="e#2548#3645#0" expanded="false" />
-            <element signature="e#3675#4420#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataserver/Amazon/Musical_Instruments/no_validation/ipuDict">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -891,9 +923,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dataserver/Amazon/sigir17/CD/reviews_CDs_and_Vinyl_5.json.gz.stem.nostop/format_adaptor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.110512">
+        <state vertical-scroll-proportion="3.1657681">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/log_conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6976745">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommenders/alg_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="165" column="40" selection-start-line="165" selection-start-column="40" selection-end-line="165" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="151" column="41" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
+          <folding>
+            <element signature="e#2548#3645#0" expanded="false" />
+            <element signature="e#3675#4420#0" expanded="false" />
+            <element signature="e#7595#7887#0" expanded="false" />
+            <element signature="e#7925#8469#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5806452">
+          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+          <folding>
+            <element signature="e#2093#2539#0" expanded="false" />
+            <element signature="e#2573#2581#0" expanded="false" />
+            <element signature="e#2616#2624#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
