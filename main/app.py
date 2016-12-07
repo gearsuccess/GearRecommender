@@ -28,7 +28,6 @@ class App:
         self.main_logger = logging.getLogger('main')
         self.__dict__.update(d)
 
-
     def mul_process(self, process_parameters):
         s = datetime.datetime.now()
         alg_name = process_parameters[0]

@@ -34,7 +34,7 @@ iter = [500]
 display = [0]
 recommend_new = [1]
 number_of_test_seen = [1000]
-main_evaluation = ['f1']
+main_evaluation = ['rmse']
 #value: f1, hit, ndcg, p, r, rmse
 
 [BPR]

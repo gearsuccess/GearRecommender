@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b18db047-48cd-4c26-8f8b-16617e14c9f8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommenders/collabrativefiltering/biased_fm.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/app.py" afterPath="$PROJECT_DIR$/main/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/conf" afterPath="$PROJECT_DIR$/main/conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/log_conf" afterPath="$PROJECT_DIR$/main/log_conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommenders/alg_factory.py" afterPath="$PROJECT_DIR$/recommenders/alg_factory.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py" afterPath="$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py" />
     </list>
     <ignored path="GearRecommender.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bpr.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bpr.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="5.312605">
               <caret line="151" column="41" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
               <folding>
                 <element signature="e#2548#3645#0" expanded="false" />
@@ -39,42 +35,6 @@
                 <element signature="e#7595#7887#0" expanded="false" />
                 <element signature="e#7925#8469#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5806452">
-              <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
-              <folding>
-                <element signature="e#2093#2539#0" expanded="false" />
-                <element signature="e#2573#2581#0" expanded="false" />
-                <element signature="e#2616#2624#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="biased_mf.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="165" column="40" selection-start-line="165" selection-start-column="40" selection-end-line="165" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -143,8 +103,8 @@
         <option value="$PROJECT_DIR$/main/log_conf" />
         <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py" />
         <option value="$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py" />
-        <option value="$PROJECT_DIR$/main/conf" />
         <option value="$PROJECT_DIR$/main/app.py" />
+        <option value="$PROJECT_DIR$/main/conf" />
       </list>
     </option>
   </component>
@@ -542,7 +502,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3197065" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28842315" sideWeight="0.48509052" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39671814" sideWeight="0.22012578" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39092663" sideWeight="0.22012578" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30598456" sideWeight="0.6755765" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39671814" sideWeight="0.7798742" order="2" side_tool="false" content_ui="tabs" />
@@ -945,9 +905,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py">
+    <entry file="file://$PROJECT_DIR$/main/conf">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/biased_mf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.033613447">
           <caret line="165" column="40" selection-start-line="165" selection-start-column="40" selection-end-line="165" selection-end-column="40" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -955,35 +923,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/conf">
+    <entry file="file://$PROJECT_DIR$/main/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
+        <state vertical-scroll-proportion="0.48739496">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#312#487#0" expanded="false" />
+            <element signature="e#525#565#0" expanded="false" />
+            <element signature="e#606#728#0" expanded="false" />
+            <element signature="e#785#2059#0" expanded="false" />
+            <element signature="e#2092#2538#0" expanded="false" />
+            <element signature="e#2572#2580#0" expanded="false" />
+            <element signature="e#2615#2623#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/recommenders/collabrativefiltering/bpr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="5.312605">
           <caret line="151" column="41" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
           <folding>
             <element signature="e#2548#3645#0" expanded="false" />
             <element signature="e#3675#4420#0" expanded="false" />
             <element signature="e#7595#7887#0" expanded="false" />
             <element signature="e#7925#8469#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5806452">
-          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
-          <folding>
-            <element signature="e#2093#2539#0" expanded="false" />
-            <element signature="e#2573#2581#0" expanded="false" />
-            <element signature="e#2616#2624#0" expanded="false" />
           </folding>
         </state>
       </provider>
