@@ -57,7 +57,7 @@ class TopN():
             result = np.array([i for i in self.popItems if i not in self.user_purchased_item_dict[u]])[:self.n]
         return result
 
-    def score(self, log):
+    def score(self):
         e = Eval()
         predict_rating_list = []
         true_rating_list = []
